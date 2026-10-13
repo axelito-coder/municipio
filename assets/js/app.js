@@ -174,7 +174,7 @@
         : visibles.length + " de " + lista.length + " instituciones";
       destino.innerHTML = visibles.length
         ? visibles.map(function (i) { return tarjetaInstitucion(i, false); }).join("")
-        : '<p class="vacio">No encontramos instituciones con esos filtros.</p>';
+        : '<p class="vacio">Uy, no encontramos lugares con esos filtros. Probá con otra palabra o elegí “Todas”.</p>';
     }
     [q, o, l].forEach(function (el) { if (el) el.addEventListener(el.tagName === "SELECT" ? "change" : "input", pintar); });
     pintar();
@@ -264,10 +264,10 @@
       if (fTexto.value && !coincide([c.c, c.f, c.i, c.e, c.s, c.l].join(" "), fTexto.value)) return false;
       return true;
     });
-    contador.textContent = filtrados.length === 1 ? "1 curso encontrado" : filtrados.length + " cursos encontrados";
+    contador.textContent = filtrados.length === 1 ? "Encontramos 1 curso para vos" : "Encontramos " + filtrados.length + " cursos para vos";
     listaCursos.innerHTML = filtrados.length
       ? filtrados.slice(0, mostrados).map(tarjetaCurso).join("")
-      : '<p class="vacio">No encontramos cursos con esos filtros. Probá con otra palabra o limpiá los filtros.</p>';
+      : '<p class="vacio">No encontramos cursos con esos filtros. Probá con otra palabra, destildá “Solo en el Partido de Morón” o tocá “Limpiar filtros”. Si no aparece lo que buscás, escribinos a <a href="mailto:formacionparaeltrabajo@moron.gov.ar">formacionparaeltrabajo@moron.gov.ar</a>.</p>';
     botonMas.hidden = filtrados.length <= mostrados;
     if (!botonMas.hidden) botonMas.textContent = "Ver más cursos (" + (filtrados.length - mostrados) + " restantes)";
   }
@@ -331,7 +331,8 @@
       if (insts.length > 30) html += "<p>Se muestran las primeras 30. Probá con una búsqueda más precisa.</p>";
     }
     if (!html) {
-      html = '<p class="vacio">No encontramos resultados para “' + esc(q) + "”. Probá con otra palabra, por ejemplo un oficio, una orientación o una localidad.</p>";
+      html = '<p class="vacio">No encontramos nada para “' + esc(q) + "”. Probá con otra palabra, por ejemplo un oficio, una orientación o tu localidad. " +
+        'O escribinos a <a href="mailto:formacionparaeltrabajo@moron.gov.ar">formacionparaeltrabajo@moron.gov.ar</a> y te ayudamos.</p>';
     }
     cuerpoResultados.innerHTML = html;
     seccionResultados.hidden = false;
@@ -341,6 +342,37 @@
   $("#cerrar-resultados").addEventListener("click", function () {
     seccionResultados.hidden = true;
     qGeneral.focus();
+  });
+
+  // ── Tu camino: selector de situaciones (pestañas accesibles) ─────────────
+  var pestanas = $$('.personas [role="tab"]');
+
+  function elegirPersona(clave, enfocar) {
+    pestanas.forEach(function (t) {
+      var activa = t.getAttribute("data-persona") === clave;
+      t.setAttribute("aria-selected", activa ? "true" : "false");
+      t.tabIndex = activa ? 0 : -1;
+      $("#" + t.getAttribute("aria-controls")).hidden = !activa;
+      if (activa && enfocar) t.focus();
+    });
+  }
+
+  pestanas.forEach(function (t, i) {
+    t.addEventListener("click", function () { elegirPersona(t.getAttribute("data-persona")); });
+    t.addEventListener("keydown", function (e) {
+      var destino = null;
+      if (e.key === "ArrowRight" || e.key === "ArrowDown") destino = pestanas[(i + 1) % pestanas.length];
+      if (e.key === "ArrowLeft" || e.key === "ArrowUp") destino = pestanas[(i - 1 + pestanas.length) % pestanas.length];
+      if (e.key === "Home") destino = pestanas[0];
+      if (e.key === "End") destino = pestanas[pestanas.length - 1];
+      if (destino) { e.preventDefault(); elegirPersona(destino.getAttribute("data-persona"), true); }
+    });
+  });
+  elegirPersona("secundaria");
+
+  // Atajos de la portada que abren una situación concreta
+  $$(".portada__sugerencias [data-persona]").forEach(function (a) {
+    a.addEventListener("click", function () { elegirPersona(a.getAttribute("data-persona")); });
   });
 
   // ── Cifras de portada ─────────────────────────────────────────────────────

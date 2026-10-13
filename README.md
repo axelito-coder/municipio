@@ -4,13 +4,15 @@ Sitio web de la Guía Educativa y de Formación Laboral del Municipio de Morón 
 
 ## Qué incluye
 
-- **¿Qué querés hacer?** y **ruta educativa**: accesos directos según el objetivo (terminar la primaria o la secundaria, aprender un oficio, estudiar una carrera, buscar trabajo…).
-- **Conociendo Morón**: población, localidades, actividad productiva y parques industriales.
-- **Empleo**: la Secretaría y sus direcciones, programas y centros.
-- **Educación**: directorios con buscador y filtros para primaria y secundaria de adultos (CENS, CEBAS y FinEs), secundarias orientadas, escuelas técnicas, discapacidad (CFI), formación laboral, institutos superiores, formación artística y universidades.
-- **Buscador de cursos**: los 558 cursos de la planilla de oferta formativa, filtrables por rubro, localidad e institución.
-- **Mapa / ¿Cómo llegar?**: cada institución se puede ver en Google Maps y pedir indicaciones. También incluye la información de trenes, accesos y colectivos.
-- **Voces de estudiantes** y datos de contacto.
+- **Portada** con un buscador en lenguaje cotidiano ("¿Qué te gustaría hacer?") y atajos a las situaciones más comunes.
+- **Tu camino**: cada persona elige la frase que se parece a lo que le pasa ("No terminé la primaria", "Quiero aprender un oficio", "Estoy buscando trabajo", "Quiero emprender"…) y ve qué opciones tiene y los pasos para empezar.
+- **Historias reales**: los testimonios de estudiantes de la guía, con una historia destacada.
+- **Dónde estudiar**: directorios con buscador y filtros para primaria y secundaria de adultos (CENS, CEBAS y FinEs), secundarias orientadas, escuelas técnicas, discapacidad (CFI), formación laboral, institutos superiores, formación artística y universidades.
+- **Encontrá tu curso**: los 558 cursos de la planilla de oferta formativa, filtrables por rubro, localidad y centro.
+- **Trabajo**: la Agencia de Empleo, Formación para el Trabajo, los centros de capacitación y los programas de economía social para emprender.
+- **Conociendo Morón**: población, localidades y parques industriales.
+- **¿Cómo llego?**: cada lugar se puede ver en Google Maps y pedir indicaciones, más la información de trenes, colectivos y accesos.
+- **Preguntas frecuentes** en lenguaje simple y un cierre con teléfono y correo de contacto.
 - **Accesibilidad**: tipografía legible (Atkinson Hyperlegible), tamaño de texto ajustable, modo de alto contraste, modo oscuro automático, navegación por teclado y versión imprimible.
 
 Es un sitio estático (HTML, CSS y JavaScript sin dependencias): no necesita servidor ni compilación. Se puede abrir `index.html` directamente en el navegador.

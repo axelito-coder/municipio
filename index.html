@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Guía Educativa y de Formación Laboral · Morón 2026</title>
-  <meta name="description" content="Toda la oferta educativa, de formación profesional y de empleo del Municipio de Morón en un solo lugar: terminalidad educativa, escuelas técnicas, cursos gratuitos, institutos superiores, universidades y más.">
+  <meta name="description" content="Terminar la escuela, aprender un oficio, estudiar una carrera o conseguir trabajo: todo lo que hay en Morón para dar tu próximo paso, en un solo lugar.">
   <meta name="theme-color" content="#d4141c">
   <link rel="icon" href="assets/img/logo-moron.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Caveat:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/estilos.css">
 </head>
 <body>
@@ -18,7 +18,7 @@
   <!-- Barra de accesibilidad -->
   <div class="accesibilidad" role="region" aria-label="Opciones de accesibilidad">
     <div class="contenedor accesibilidad__fila">
-      <span class="accesibilidad__titulo">Accesibilidad</span>
+      <span class="accesibilidad__titulo">¿Te cuesta leer? Ajustá la página</span>
       <button type="button" data-accion="achicar" aria-label="Achicar el texto">A−</button>
       <button type="button" data-accion="agrandar" aria-label="Agrandar el texto">A+</button>
       <button type="button" data-accion="contraste" aria-pressed="false">◐ Alto contraste</button>
@@ -36,34 +36,86 @@
         <span aria-hidden="true">☰</span> Menú
       </button>
       <nav id="menu" class="menu" aria-label="Secciones">
-        <a href="#moron">Conociendo Morón</a>
-        <a href="#empleo">Empleo</a>
-        <a href="#educacion">Educación</a>
+        <a href="#camino">Tu camino</a>
+        <a href="#educacion">Dónde estudiar</a>
         <a href="#cursos">Cursos</a>
-        <a href="#mapa">Mapa</a>
-        <a href="#contacto">Contacto</a>
+        <a href="#empleo">Trabajo</a>
+        <a href="#mapa">Cómo llegar</a>
+        <a href="#preguntas">Preguntas</a>
       </nav>
     </div>
   </header>
 
   <main id="contenido">
-    <!-- ═══════════════ INICIO ═══════════════ -->
+    <!-- ═══════════════ PORTADA ═══════════════ -->
     <section id="inicio" class="portada">
       <div class="contenedor portada__grilla">
         <div>
-          <p class="etiqueta">Municipio de Morón · Edición 2026</p>
-          <h1>Guía Educativa y de Formación Laboral</h1>
-          <p class="portada__bajada">Toda la oferta para estudiar, capacitarte y encontrar trabajo en Morón, en un solo lugar. Clara, gratuita y pensada para vos.</p>
+          <p class="etiqueta">Guía Educativa y de Formación Laboral · Morón 2026</p>
+          <h1>Tu próximo paso <span class="subrayado">empieza acá</span></h1>
+          <p class="portada__bajada">Terminar la escuela, aprender un oficio, estudiar una carrera o conseguir trabajo. Juntamos todo lo que hay en Morón para que encuentres tu camino, a tu ritmo y cerca de tu casa.</p>
           <form class="buscador" role="search" id="buscador-general">
-            <label for="q-general" class="solo-lectores">Buscar instituciones y cursos</label>
-            <input id="q-general" type="search" placeholder="Buscá una escuela, un curso o un barrio… (ej: electricista, Haedo, enfermería)" autocomplete="off">
-            <button type="submit">Buscar</button>
+            <label for="q-general">¿Qué te gustaría hacer?</label>
+            <div class="buscador__fila">
+              <input id="q-general" type="search" placeholder="Probá con: cocina, electricista, secundaria, Castelar…" autocomplete="off">
+              <button type="submit">Buscar</button>
+            </div>
           </form>
+          <p class="portada__sugerencias">O empezá por acá:
+            <a href="#camino" data-persona="secundaria">Quiero terminar la secundaria</a>
+            <a href="#camino" data-persona="oficio">Quiero aprender un oficio</a>
+            <a href="#camino" data-persona="trabajo">Busco trabajo</a>
+          </p>
         </div>
+        <figure class="portada__ilustracion" aria-hidden="true">
+          <svg viewBox="0 0 420 380" role="img">
+            <defs>
+              <clipPath id="recorte"><circle cx="210" cy="190" r="170"/></clipPath>
+            </defs>
+            <circle cx="210" cy="190" r="170" class="ilu-fondo"/>
+            <circle cx="345" cy="70" r="26" class="ilu-sol"/>
+            <g clip-path="url(#recorte)">
+              <!-- Persona 1: adulta con libro -->
+              <path d="M40 380 C40 300 70 270 115 270 C160 270 190 300 190 380 Z" class="ilu-amarillo"/>
+              <circle cx="115" cy="225" r="34" fill="#8d5524"/>
+              <path d="M80 222 C80 185 150 180 150 222 C140 205 95 200 80 222 Z" fill="#2b1a10"/>
+              <path d="M78 224 C70 250 82 262 90 260 L88 226 Z" fill="#2b1a10"/>
+              <rect x="88" y="300" width="58" height="42" rx="4" class="ilu-rojo" transform="rotate(-8 117 321)"/>
+              <path d="M117 300 L117 342" stroke="#fff" stroke-width="3" transform="rotate(-8 117 321)"/>
+              <!-- Persona 3: trabajador con casco -->
+              <path d="M235 380 C235 305 262 278 305 278 C348 278 378 305 378 380 Z" class="ilu-azul"/>
+              <circle cx="305" cy="236" r="32" fill="#c68642"/>
+              <path d="M270 232 C270 196 340 196 340 232 Z" class="ilu-sol"/>
+              <rect x="264" y="228" width="82" height="8" rx="4" class="ilu-sol"/>
+              <g transform="rotate(35 330 330)">
+                <rect x="325" y="300" width="10" height="56" rx="4" fill="#5b6770"/>
+                <circle cx="330" cy="298" r="13" fill="#5b6770"/>
+                <rect x="325" y="284" width="10" height="12" class="ilu-azul"/>
+              </g>
+              <!-- Persona 2: joven con birrete -->
+              <path d="M135 380 C135 290 168 258 212 258 C256 258 288 290 288 380 Z" class="ilu-verde"/>
+              <circle cx="212" cy="208" r="36" fill="#f1c27d"/>
+              <path d="M176 204 C178 172 246 168 248 204 C232 190 196 190 176 204 Z" fill="#6b3e1f"/>
+              <polygon points="212,150 262,168 212,186 162,168" fill="#22272b"/>
+              <rect x="190" y="172" width="44" height="16" rx="3" fill="#22272b"/>
+              <path d="M258 170 L258 196" stroke="#f6b73c" stroke-width="3"/>
+              <circle cx="258" cy="199" r="4" fill="#f6b73c"/>
+              <!-- sonrisas -->
+              <path d="M104 236 Q115 245 126 236" stroke="#2b1a10" stroke-width="3" fill="none" stroke-linecap="round"/>
+              <path d="M201 220 Q212 229 223 220" stroke="#6b3e1f" stroke-width="3" fill="none" stroke-linecap="round"/>
+              <path d="M294 246 Q305 255 316 246" stroke="#5a3a1a" stroke-width="3" fill="none" stroke-linecap="round"/>
+            </g>
+            <path d="M40 120 q10 -14 20 0 q10 14 20 0" class="ilu-trazo"/>
+            <path d="M360 270 q10 -14 20 0 q10 14 20 0" class="ilu-trazo"/>
+          </svg>
+          <figcaption class="portada__nota">Nunca es tarde para empezar 💪</figcaption>
+        </figure>
+      </div>
+      <div class="contenedor">
         <ul class="cifras" aria-label="Morón en números">
-          <li><strong data-contar="instituciones">+120</strong><span>instituciones educativas y de formación</span></li>
-          <li><strong data-contar="cursos">+500</strong><span>cursos de formación profesional</span></li>
-          <li><strong>5</strong><span>localidades: Morón, Castelar, Haedo, El Palomar y Villa Sarmiento</span></li>
+          <li><strong data-contar="instituciones">+120</strong><span>lugares donde estudiar y capacitarte</span></li>
+          <li><strong data-contar="cursos">+500</strong><span>cursos de oficios para elegir</span></li>
+          <li><strong>5</strong><span>localidades: siempre hay uno cerca</span></li>
         </ul>
       </div>
     </section>
@@ -71,51 +123,189 @@
     <section id="resultados" class="seccion seccion--clara" hidden aria-live="polite">
       <div class="contenedor">
         <div class="titulo-fila">
-          <h2>Resultados de búsqueda</h2>
+          <h2>Esto es lo que encontramos</h2>
           <button type="button" class="boton boton--borde" id="cerrar-resultados">Cerrar ✕</button>
         </div>
         <div id="resultados-cuerpo"></div>
       </div>
     </section>
 
-    <!-- ¿Qué querés hacer? -->
-    <section class="seccion" aria-labelledby="t-que">
+    <!-- ═══════════════ TU CAMINO ═══════════════ -->
+    <section id="camino" class="seccion" aria-labelledby="t-camino">
       <div class="contenedor">
-        <h2 id="t-que">¿Qué querés hacer?</h2>
-        <p class="bajada">Elegí tu objetivo y te llevamos directo a las opciones.</p>
-        <div class="accesos">
-          <a class="acceso" href="#primaria-adultos"><span class="acceso__icono" aria-hidden="true">📘</span><strong>Terminar la primaria</strong><span>Desde los 14 años</span></a>
-          <a class="acceso" href="#secundaria-adultos"><span class="acceso__icono" aria-hidden="true">📗</span><strong>Terminar la secundaria</strong><span>CENS y Plan FinEs, desde los 18</span></a>
-          <a class="acceso" href="#cursos"><span class="acceso__icono" aria-hidden="true">🔧</span><strong>Aprender un oficio</strong><span>Cursos gratuitos con salida laboral</span></a>
-          <a class="acceso" href="#superior"><span class="acceso__icono" aria-hidden="true">🎓</span><strong>Estudiar una carrera</strong><span>Profesorados, tecnicaturas y universidades</span></a>
-          <a class="acceso" href="#empleo"><span class="acceso__icono" aria-hidden="true">💼</span><strong>Buscar trabajo</strong><span>Agencia de Empleo y programas</span></a>
-          <a class="acceso" href="#artistica"><span class="acceso__icono" aria-hidden="true">🎭</span><strong>Formarme en arte</strong><span>Música, teatro, danza y artes visuales</span></a>
-          <a class="acceso" href="#discapacidad"><span class="acceso__icono" aria-hidden="true">🧩</span><strong>Inclusión y discapacidad</strong><span>Centros de Formación Integral</span></a>
-          <a class="acceso" href="#mapa"><span class="acceso__icono" aria-hidden="true">🗺️</span><strong>Ver el mapa</strong><span>Encontrá cómo llegar</span></a>
+        <p class="etiqueta">Tu camino</p>
+        <h2 id="t-camino">Contanos en qué estás y te mostramos por dónde arrancar</h2>
+        <p class="bajada">Cada historia es distinta. Elegí la frase que más se parece a lo que te pasa.</p>
+
+        <div class="personas" role="tablist" aria-label="¿En qué estás?">
+          <button type="button" role="tab" id="tab-primaria" aria-controls="panel-primaria" aria-selected="false" data-persona="primaria"><span aria-hidden="true">📘</span>No terminé la primaria</button>
+          <button type="button" role="tab" id="tab-secundaria" aria-controls="panel-secundaria" aria-selected="true" data-persona="secundaria"><span aria-hidden="true">📗</span>Quiero terminar la secundaria</button>
+          <button type="button" role="tab" id="tab-adolescente" aria-controls="panel-adolescente" aria-selected="false" data-persona="adolescente"><span aria-hidden="true">🎒</span>Estoy eligiendo secundaria</button>
+          <button type="button" role="tab" id="tab-oficio" aria-controls="panel-oficio" aria-selected="false" data-persona="oficio"><span aria-hidden="true">🔧</span>Quiero aprender un oficio</button>
+          <button type="button" role="tab" id="tab-carrera" aria-controls="panel-carrera" aria-selected="false" data-persona="carrera"><span aria-hidden="true">🎓</span>Quiero seguir estudiando</button>
+          <button type="button" role="tab" id="tab-trabajo" aria-controls="panel-trabajo" aria-selected="false" data-persona="trabajo"><span aria-hidden="true">💼</span>Estoy buscando trabajo</button>
+          <button type="button" role="tab" id="tab-emprender" aria-controls="panel-emprender" aria-selected="false" data-persona="emprender"><span aria-hidden="true">🌱</span>Quiero emprender</button>
+          <button type="button" role="tab" id="tab-inclusion" aria-controls="panel-inclusion" aria-selected="false" data-persona="inclusion"><span aria-hidden="true">🧩</span>Tengo una discapacidad o acompaño a alguien</button>
+        </div>
+
+        <div class="persona-panel" role="tabpanel" id="panel-primaria" aria-labelledby="tab-primaria" hidden>
+          <div>
+            <h3>Nunca es tarde para terminar la primaria</h3>
+            <p>Si tenés <strong>14 años o más</strong> y no pudiste terminar la primaria, podés hacerlo de forma presencial en las Escuelas Primarias para Adultos. Hay <strong>15 sedes en todo el distrito</strong>, algunas funcionan en escuelas y otras en espacios del barrio, así te queda cerca.</p>
+            <ol class="pasos">
+              <li>Buscá la sede que te quede más cómoda.</li>
+              <li>Acercate o escribí para consultar la inscripción.</li>
+              <li>Cuando termines, podés seguir con la secundaria.</li>
+            </ol>
+          </div>
+          <div class="persona-panel__acciones">
+            <a class="boton" href="#primaria-adultos">Ver las escuelas primarias</a>
+          </div>
+        </div>
+
+        <div class="persona-panel" role="tabpanel" id="panel-secundaria" aria-labelledby="tab-secundaria">
+          <div>
+            <h3>Terminar la secundaria es posible, y hay más de una forma</h3>
+            <p>Si tenés <strong>18 años o más</strong>, podés elegir entre los <strong>CENS</strong> (escuelas secundarias para adultos, con cursada de lunes a viernes o de 3 días más 2 de tutoría) y el <strong>Plan FinEs</strong> (3 días por semana, 6 cuatrimestres, con profes que te acompañan).</p>
+            <p><strong>¿Te quedaron materias?</strong> Con <em>FinEs materias pendientes</em> tenés dos meses de tutorías para rendirlas, aunque hayas cursado en otra escuela del país.</p>
+          </div>
+          <div class="persona-panel__acciones">
+            <a class="boton" href="#secundaria-adultos">Ver CENS y FinEs</a>
+            <a class="boton boton--borde" href="mailto:finesmoron@abc.gob.ar">Consultar por FinEs</a>
+          </div>
+        </div>
+
+        <div class="persona-panel" role="tabpanel" id="panel-adolescente" aria-labelledby="tab-adolescente" hidden>
+          <div>
+            <h3>Elegí la secundaria que va con vos</h3>
+            <p>En Morón hay <strong>42 secundarias orientadas</strong>, con orientaciones como Ciencias Sociales, Ciencias Naturales, Economía, Comunicación, Arte, Educación Física y Lenguas, y <strong>7 escuelas técnicas</strong> donde también aprendés un oficio: electrónica, informática, aeronáutica, automotores, electromecánica o maestro mayor de obras.</p>
+            <ol class="pasos">
+              <li>Pensá qué te gusta o qué te da curiosidad.</li>
+              <li>Filtrá las escuelas por orientación.</li>
+              <li>Mirá cuál te queda cerca y consultá.</li>
+            </ol>
+          </div>
+          <div class="persona-panel__acciones">
+            <a class="boton" href="#secundarias">Ver secundarias orientadas</a>
+            <a class="boton boton--borde" href="#tecnicas">Ver escuelas técnicas</a>
+          </div>
+        </div>
+
+        <div class="persona-panel" role="tabpanel" id="panel-oficio" aria-labelledby="tab-oficio" hidden>
+          <div>
+            <h3>Aprendé un oficio y salí a trabajar</h3>
+            <p>Los Centros de Formación Laboral y Profesional dan <strong>cursos gratuitos</strong> con salida laboral, para personas de <strong>16 o 18 años en adelante</strong> según el curso. Hay de gastronomía, electricidad, informática, construcción, textil, estética, administración y mucho más.</p>
+            <ol class="pasos">
+              <li>Buscá un curso por lo que te gusta o por tu barrio.</li>
+              <li>Mirá la fecha de inicio y la sede.</li>
+              <li>Comunicate con el centro para anotarte.</li>
+            </ol>
+          </div>
+          <div class="persona-panel__acciones">
+            <a class="boton" href="#cursos">Buscar un curso</a>
+            <a class="boton boton--borde" href="#formacion">Ver los centros</a>
+          </div>
+        </div>
+
+        <div class="persona-panel" role="tabpanel" id="panel-carrera" aria-labelledby="tab-carrera" hidden>
+          <div>
+            <h3>Seguí estudiando: profesorados, tecnicaturas y universidad</h3>
+            <p>Si ya terminaste la secundaria, en Morón tenés <strong>institutos superiores</strong> para ser docente o hacer una tecnicatura, <strong>escuelas de arte</strong> (música, teatro, danza, artes visuales) y <strong>universidades nacionales, públicas y gratuitas</strong> muy cerca. Y para personas mayores está la <strong>Universidad de Adultos Mayores</strong>.</p>
+          </div>
+          <div class="persona-panel__acciones">
+            <a class="boton" href="#superior">Institutos superiores</a>
+            <a class="boton boton--borde" href="#universidades">Universidades</a>
+            <a class="boton boton--borde" href="#artistica">Formación artística</a>
+          </div>
+        </div>
+
+        <div class="persona-panel" role="tabpanel" id="panel-trabajo" aria-labelledby="tab-trabajo" hidden>
+          <div>
+            <h3>No estás solo o sola en la búsqueda</h3>
+            <p>La <strong>Agencia de Empleo</strong> del Municipio te acompaña con orientación laboral, entrevistas personalizadas, talleres para buscar trabajo y ayuda para armar tu CV. <strong>Todos sus servicios son gratuitos.</strong></p>
+            <ol class="pasos">
+              <li>Acercate a la Secretaría o escribinos.</li>
+              <li>Armamos juntos tu perfil y tu CV.</li>
+              <li>Te conectamos con búsquedas y capacitaciones.</li>
+            </ol>
+          </div>
+          <div class="persona-panel__acciones">
+            <a class="boton" href="#empleo">Conocer la Agencia de Empleo</a>
+            <a class="boton boton--borde" href="mailto:formacionparaeltrabajo@moron.gov.ar">Escribinos</a>
+          </div>
+        </div>
+
+        <div class="persona-panel" role="tabpanel" id="panel-emprender" aria-labelledby="tab-emprender" hidden>
+          <div>
+            <h3>Tu emprendimiento también es trabajo</h3>
+            <p>Desde la economía social acompañamos a quienes producen y venden: <strong>microcréditos</strong> para emprendimientos y cooperativas, <strong>asistencia técnica</strong> en diseño, costos y comercialización, y lugares para vender como la <strong>Feria Permanente</strong> de Plaza San Martín, las ferias itinerantes y la <strong>Marca EME</strong>.</p>
+          </div>
+          <div class="persona-panel__acciones">
+            <a class="boton" href="#economia-social">Ver programas para emprender</a>
+          </div>
+        </div>
+
+        <div class="persona-panel" role="tabpanel" id="panel-inclusion" aria-labelledby="tab-inclusion" hidden>
+          <div>
+            <h3>Formación pensada para cada persona</h3>
+            <p>Los <strong>Centros de Formación Integral (CFI)</strong> reciben a jóvenes y adultos con discapacidad que terminaron la educación especial o que necesitan una propuesta integral. Con talleres, prácticas y acompañamiento personalizado, preparan para la vida independiente y el trabajo.</p>
+            <ol class="pasos">
+              <li>Elegí el CFI más cercano (hay en Haedo, Morón y El Palomar).</li>
+              <li>Llamá o acercate en su horario de atención.</li>
+              <li>Te cuentan los requisitos, los talleres y las vacantes.</li>
+            </ol>
+          </div>
+          <div class="persona-panel__acciones">
+            <a class="boton" href="#discapacidad">Ver los CFI</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ VOCES ═══════════════ -->
+    <section id="voces" class="seccion seccion--calida" aria-labelledby="t-voces">
+      <div class="contenedor">
+        <p class="etiqueta">Historias reales</p>
+        <h2 id="t-voces">Lo que nos cuentan quienes se animaron</h2>
+        <figure class="voz-destacada">
+          <blockquote>
+            <p>“Cuando me enfrenté a la escuela textil solo tenía ganas de aprender y mucho miedo por la situación en la que estaba. Hoy tengo un pequeño taller de ropa interior. Voy caminando despacio. Gracias por darme los elementos para recorrer este camino…”</p>
+          </blockquote>
+          <figcaption><span class="avatar" style="--av:#d4141c" aria-hidden="true">TL</span><span><strong>Teresita De León</strong>Hoy tiene su propio taller</span></figcaption>
+        </figure>
+        <div class="voces">
+          <figure><blockquote><p>“Yo comencé en un plan social y me sentía perdida. Cuando me dieron la lista de cursos, un rincón de mi corazón saltó. Ya no le tengo tanto temor a no poder por la edad, y creo que recién empiezo…”</p></blockquote><figcaption><span class="avatar" style="--av:#2f9e6e" aria-hidden="true">LD</span><strong>Liliana Del Sordo</strong></figcaption></figure>
+          <figure><blockquote><p>“La oportunidad de estudiar que he tenido a mis 50 años es maravillosa, junto a la posibilidad de trabajar, integrándome así al mercado laboral…”</p></blockquote><figcaption><span class="avatar" style="--av:#2f6fb5" aria-hidden="true">MR</span><strong>María del Carmen Rubier</strong></figcaption></figure>
+          <figure><blockquote><p>“Con tan solo 20 años logré empaparme de conocimientos. Mi futuro continúa y tengo la oportunidad de aplicarlos en la vida. Aprendí que las ganas hacen la fuerza…”</p></blockquote><figcaption><span class="avatar" style="--av:#b0237a" aria-hidden="true">SR</span><strong>Sabrina Rossetti</strong></figcaption></figure>
+          <figure><blockquote><p>“Estoy sin trabajo, quiero estudiar primero algo y luego armar un emprendimiento para sostener a mi familia…”</p></blockquote><figcaption><span class="avatar" style="--av:#b8420f" aria-hidden="true">NI</span><strong>Nicolás Ierino</strong></figcaption></figure>
+          <figure><blockquote><p>“Con lo que aprendí en los cursos estoy haciendo trabajos en mi casa. Voy a continuar especializándome, por eso me anoté en otro curso para saber más…”</p></blockquote><figcaption><span class="avatar" style="--av:#6b3fa0" aria-hidden="true">GL</span><strong>Gustavo López</strong></figcaption></figure>
+          <figure><blockquote><p>“Los cursos son importantes así como su difusión, para que más personas se puedan preparar y dar sentido a su vida, como a mí…”</p></blockquote><figcaption><span class="avatar" style="--av:#00707a" aria-hidden="true">GP</span><strong>Gabriela Pintos</strong></figcaption></figure>
+          <figure><blockquote><p>“Me anoté en un curso, por primera vez, para poder comenzar a trabajar…”</p></blockquote><figcaption><span class="avatar" style="--av:#8a5a00" aria-hidden="true">FA</span><strong>Fernando Arrieta</strong></figcaption></figure>
         </div>
       </div>
     </section>
 
     <!-- Ruta educativa -->
-    <section class="seccion seccion--clara" aria-labelledby="t-ruta">
+    <section class="seccion" aria-labelledby="t-ruta">
       <div class="contenedor">
-        <h2 id="t-ruta">Tu ruta educativa</h2>
-        <p class="bajada">Nunca es tarde para empezar o retomar. Cada paso abre el siguiente.</p>
+        <h2 id="t-ruta">Un camino con muchas puertas de entrada</h2>
+        <p class="bajada">No importa dónde te quedaste: podés entrar por cualquier paso y seguir avanzando.</p>
         <ol class="ruta">
-          <li><a href="#primaria-adultos"><span class="ruta__num">1</span><strong>Primaria</strong><span>Escuelas Primarias para Adultos y CEA</span></a></li>
-          <li><a href="#secundaria-adultos"><span class="ruta__num">2</span><strong>Secundaria</strong><span>Secundarias orientadas, técnicas, CENS y FinEs</span></a></li>
-          <li><a href="#formacion"><span class="ruta__num">3</span><strong>Formación profesional</strong><span>Oficios con salida laboral inmediata</span></a></li>
-          <li><a href="#superior"><span class="ruta__num">4</span><strong>Estudios superiores</strong><span>Institutos y universidades públicas</span></a></li>
-          <li><a href="#empleo"><span class="ruta__num">5</span><strong>Trabajo</strong><span>Agencia de Empleo y economía social</span></a></li>
+          <li><a href="#primaria-adultos"><span class="ruta__num">1</span><strong>Primaria</strong><span>Escuelas Primarias para Adultos, desde los 14 años</span></a></li>
+          <li><a href="#secundaria-adultos"><span class="ruta__num">2</span><strong>Secundaria</strong><span>Orientadas, técnicas, CENS y FinEs</span></a></li>
+          <li><a href="#formacion"><span class="ruta__num">3</span><strong>Un oficio</strong><span>Cursos gratuitos con salida laboral</span></a></li>
+          <li><a href="#superior"><span class="ruta__num">4</span><strong>Una carrera</strong><span>Institutos y universidades públicas</span></a></li>
+          <li><a href="#empleo"><span class="ruta__num">5</span><strong>Un trabajo</strong><span>Agencia de Empleo y economía social</span></a></li>
         </ol>
       </div>
     </section>
 
     <!-- Presentación -->
-    <section id="presentacion" class="seccion" aria-labelledby="t-intro">
+    <section id="presentacion" class="seccion seccion--clara" aria-labelledby="t-intro">
       <div class="contenedor dos-columnas">
         <div>
-          <h2 id="t-intro">Introducción</h2>
+          <p class="etiqueta">Por qué hicimos esta guía</p>
+          <h2 id="t-intro">Formarse y trabajar con dignidad son derechos</h2>
           <p>La Guía de Instituciones Educativas y de Formación Laboral 2025/2026 nace como una herramienta pensada para acompañar a quienes buscan crecer, aprender y construir un proyecto de vida a través del estudio y el trabajo.</p>
           <p>Desde el Municipio de Morón impulsamos esta guía con el objetivo de acercar, de manera clara y accesible, toda la oferta educativa y de capacitación disponible en nuestro territorio. Porque creemos que la formación y el trabajo digno son derechos, no privilegios, y que el Estado tiene un rol clave en garantizar oportunidades reales para todos y todas.</p>
           <p>Este material reúne propuestas de instituciones que trabajan todos los días por una educación inclusiva, de calidad y con perspectiva de futuro. Queremos que esta guía sea una puerta de entrada para quienes se animan a dar el primer paso, volver a intentarlo o seguir apostando a su desarrollo personal y laboral.</p>
@@ -133,282 +323,122 @@
       </div>
     </section>
 
-    <!-- ═══════════════ CONOCIENDO MORÓN ═══════════════ -->
-    <section id="moron" class="seccion seccion--clara" aria-labelledby="t-moron">
-      <div class="contenedor">
-        <h2 id="t-moron">Conociendo Morón</h2>
-        <p class="bajada">El Municipio de Morón se ubica al noroeste del conurbano bonaerense, en el corazón del Área Metropolitana de Buenos Aires. Por su cercanía con la Ciudad Autónoma de Buenos Aires y su desarrollo urbano, económico y educativo, es uno de los centros estratégicos de la región oeste del GBA.</p>
-
-        <div class="moron-grilla">
-          <figure class="mapa-localidades">
-            <img src="assets/img/mapa-localidades.jpg" alt="Mapa del Partido de Morón con sus cinco localidades: El Palomar al norte, Villa Sarmiento y Haedo al este, Castelar al oeste y Morón al centro-sur. Limita con Hurlingham, Tres de Febrero, La Matanza, Merlo e Ituzaingó." width="736" height="758" loading="lazy">
-            <figcaption>Las cinco localidades del partido y los distritos vecinos.</figcaption>
-          </figure>
-          <div>
-            <ul class="datos">
-              <li><strong>334.178</strong><span>habitantes según el Censo Nacional 2022 — el 3,07% de la población de los 24 partidos del Gran Buenos Aires. La mayoría se identifica como mujer o persona autopercibida como tal.</span></li>
-              <li><strong>55,6 km²</strong><span>de superficie, con cinco localidades: Morón, Castelar, Haedo, El Palomar y Villa Sarmiento.</span></li>
-              <li><strong>20 km</strong><span>de la Ciudad de Buenos Aires y 88 km de La Plata: excelente conectividad con los principales centros urbanos, industriales y universitarios.</span></li>
-              <li><strong>+700</strong><span>industrias y 10.600 establecimientos comerciales y de servicios: metalmecánica, textil, plástico, madera, alimentos y tecnología aplicada.</span></li>
-            </ul>
-          </div>
-        </div>
-
-        <h3>Actividad productiva y comercial</h3>
-        <p>Morón es un importante <strong>polo productivo, comercial y de servicios</strong> en el oeste del AMBA. Su infraestructura, su conectividad (ferrocarril Sarmiento, Acceso Oeste, autopistas y rutas) y la presencia de parques industriales lo posicionan como un territorio clave para la inversión y el empleo local.</p>
-
-        <h3>Parques industriales</h3>
-        <div class="tarjetas tarjetas--tres">
-          <article class="tarjeta">
-            <h4>La Cantábrica</h4>
-            <p>Parque industrial modelo, ejemplo de articulación entre el Estado y el sector privado. Alberga PyMEs de metalmecánica, química, impresión, caucho, alimentos, plásticos y diseño industrial. Está en proceso de <strong>ampliación con 78.000 m² adicionales</strong>, donde se proyecta la radicación de <strong>más de 60 empresas nuevas</strong> y <strong>1.000 empleos directos</strong>.</p>
-            <p class="tarjeta__dir">📍 Tres Arroyos 329, Haedo</p>
-          </article>
-          <article class="tarjeta">
-            <h4>PITAM</h4>
-            <p>Parque Industrial Tecnológico Aeronáutico Morón, dentro del Aeródromo de Morón. Fomenta el desarrollo tecnológico e industrial en aeronáutica, electrónica, precisión, logística, informática aplicada y formación técnica. Superficie base de <strong>20 hectáreas</strong>, con posibilidad de ampliación.</p>
-            <p class="tarjeta__dir">📍 Av. Pte. Figueroa Alcorta 500, Castelar</p>
-          </article>
-          <article class="tarjeta">
-            <h4>Parque DECA</h4>
-            <p>En el predio de la ex Planta Carraro. Desde 2015 funciona como <strong>parque industrial multirubro</strong>, con infraestructura de última generación, espacios para radicación de empresas y cumplimiento de la normativa ambiental.</p>
-            <p class="tarjeta__dir">📍 Valentín Gómez 577, Haedo</p>
-          </article>
-          <article class="tarjeta">
-            <h4>Parque Industrial Morón</h4>
-            <p>Núcleo productivo con empresas dedicadas a la fabricación de electrodomésticos, alimentos, editoriales y semirremolques, consolidado como un centro neurálgico para el desarrollo económico de la región.</p>
-          </article>
-        </div>
-
-        <div class="dos-columnas dos-columnas--arriba">
-          <div>
-            <h3>Gobierno municipal y gestión comunitaria</h3>
-            <p>El Municipio está encabezado por el intendente <strong>Lic. Lucas Ghi</strong>, con un gabinete de 10 secretarías y <strong>14 Unidades de Gestión Comunitaria (UGC)</strong> distribuidas territorialmente, que acercan el Estado a cada barrio.</p>
-            <p>La comuna cuenta con sedes del <strong>Poder Judicial de la Provincia</strong> y <strong>juzgados federales</strong>. El <strong>Honorable Concejo Deliberante (HCD)</strong> está integrado por <strong>24 concejalas y concejales</strong> elegidos por voto directo.</p>
-          </div>
-          <div>
-            <h3>Región Educativa N° 8</h3>
-            <p>Morón forma parte de la <strong>Región Educativa N° 8</strong> junto con Ituzaingó y Merlo. El distrito cuenta con una extensa red de instituciones de gestión estatal y privada en todos los niveles: inicial, primaria, secundaria, técnica, artística, superior y universitaria.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════ EMPLEO ═══════════════ -->
-    <section id="empleo" class="seccion" aria-labelledby="t-empleo">
-      <div class="contenedor">
-        <p class="etiqueta">Trabajo y producción</p>
-        <h2 id="t-empleo">Secretaría de Desarrollo Local, Empleo y Economía Social</h2>
-        <p class="bajada">Diseña y desarrolla <strong>políticas públicas para el impulso del trabajo, la producción y la inclusión sociolaboral</strong> en el distrito.</p>
-        <ul class="lista-check lista-check--columnas">
-          <li>Promover actividades productivas y de servicios.</li>
-          <li>Fortalecer la incorporación de personas al entramado económico local.</li>
-          <li>Acompañar la generación de empleo en sectores históricamente excluidos.</li>
-          <li>Impulsar el desarrollo de proyectos autogestivos.</li>
-          <li>Brindar orientación ocupacional y herramientas de formación laboral.</li>
-        </ul>
-
-        <div class="destacado">
-          <h3>Proyecto Educación y Trabajo</h3>
-          <p>Articula formación laboral y mercado de trabajo junto a los Centros de Formación Profesional municipales y provinciales, el Centro Textil e Indumentaria y el Centro de Profesionalización de Trabajadores de Casas Particulares. A través de tutorías, talleres y acompañamiento pedagógico impulsa la elaboración de <strong>proyectos ocupacionales</strong>, el desarrollo de <strong>competencias de empleabilidad</strong> y la promoción del <strong>autoempleo</strong> y el trabajo decente.</p>
-          <ul class="pastillas">
-            <li><strong>Competencias laborales</strong> saberes que mejoran la empleabilidad</li>
-            <li><strong>Perspectiva de género</strong> atención a desigualdades estructurales</li>
-            <li><strong>Economía social</strong> vínculos cooperativos y solidarios</li>
-          </ul>
-        </div>
-
-        <div class="tarjetas tarjetas--dos">
-          <article class="tarjeta">
-            <h3>Dirección de Programas de Empleo y Abordajes Integrales</h3>
-            <p>Gestiona el acceso a <strong>programas de empleo</strong> que mejoran la empleabilidad e inserción laboral de personas desocupadas.</p>
-            <p><strong>Servicios a trabajadoras/es:</strong></p>
-            <ul>
-              <li>Orientación laboral y entrevistas personalizadas.</li>
-              <li>Talleres de herramientas para la búsqueda de empleo.</li>
-              <li>Apoyo para completar trayectorias educativas y elaborar el CV.</li>
-            </ul>
-          </article>
-          <article class="tarjeta">
-            <h3>Dirección de la Agencia de Empleo</h3>
-            <p>Intermediación laboral. Forma parte de la <strong>Red de Servicios de Empleo del Ministerio de Trabajo</strong>. <strong>Todos sus servicios son gratuitos.</strong></p>
-            <p><strong>Servicios a empresas:</strong></p>
-            <ul>
-              <li>Búsqueda y preselección de personal.</li>
-              <li>Asesoramiento legal y financiero sobre contratación.</li>
-              <li>Incentivos para entrenamiento y formación en puestos de trabajo.</li>
-            </ul>
-          </article>
-          <article class="tarjeta">
-            <h3>Dirección de Formación para el Trabajo</h3>
-            <p>Brinda a jóvenes y personas adultas herramientas para <strong>fortalecer su empleabilidad</strong>, articulando con instituciones educativas, sindicatos, cámaras empresarias y programas de formación profesional.</p>
-            <p>Gestiona <strong>vacantes gratuitas</strong>, asesora sobre la <strong>oferta educativa local</strong> (primaria, secundaria y formación profesional), articula prácticas educativas en ambientes de trabajo e impulsa acuerdos sectoriales que amplían la oferta de capacitación.</p>
-          </article>
-          <article class="tarjeta">
-            <h3>Dirección de Polos Productivos</h3>
-            <p>Consolida emprendimientos autogestivos y fomenta <strong>encadenamientos productivos</strong> con cooperativas, PyMEs y grandes empresas. Con equipo técnico y equipamiento moderno brinda:</p>
-            <ul>
-              <li>Asistencia en diseño, comercialización, sustentabilidad y costos.</li>
-              <li>Talleres sobre herramientas productivas y gestión del trabajo.</li>
-            </ul>
-            <p class="tarjeta__dir">📍 Polo Productivo de la Economía Social: Mariano Acha 780, Morón</p>
-          </article>
-          <article class="tarjeta">
-            <h3>Centro Textil e Indumentaria Morón</h3>
-            <p>Capacitación <strong>gratuita</strong> en confección, diseño y producción textil con equipamiento industrial. Talleres iniciales, medios y avanzados, con acompañamiento pedagógico y enfoque autogestivo.</p>
-            <ul>
-              <li>Desarrollar competencias técnicas y autogestivas.</li>
-              <li>Alcanzar estándares de producción profesional.</li>
-              <li>Fortalecer unidades productivas locales.</li>
-            </ul>
-            <p class="tarjeta__dir">📍 Baradero 1340, Morón</p>
-          </article>
-          <article class="tarjeta">
-            <h3>Centro de Profesionalización y Jerarquización de Trabajadores Particulares</h3>
-            <p>Para trabajadoras/es del ámbito doméstico. Capacitación <strong>gratuita con insumos incluidos</strong>, tutorías pedagógicas y formación práctica.</p>
-            <ul>
-              <li>Revalorizar saberes y profesionalizar tareas.</li>
-              <li>Promover la terminalidad educativa.</li>
-              <li>Impulsar el trabajo decente y la autonomía laboral.</li>
-            </ul>
-          </article>
-          <article class="tarjeta">
-            <h3>Dirección de Promoción de la Economía Social y Popular</h3>
-            <p>Promueve la <strong>economía social y solidaria</strong>, fortaleciendo emprendimientos populares y acompañando su sostenibilidad: organización horizontal y cooperativa, producción con enfoque humano, ecológico y de género, y recuperación de saberes colectivos.</p>
-            <ul>
-              <li><strong>Apoyo a Iniciativas Productivas y Autogestivas:</strong> para personas desocupadas o en situación de vulnerabilidad. Acompañamiento técnico, formalización y financiamiento.</li>
-              <li><strong>Programa Municipal de Microcréditos:</strong> créditos escalonados a emprendimientos, cooperativas y mutuales.</li>
-              <li><strong>Promoción de Cooperativas y Mutuales:</strong> constitución, formalización y gestión.</li>
-              <li><strong>Consejo Municipal de Economía Social y Solidaria:</strong> gestión participativa entre el Estado y emprendedores.</li>
-            </ul>
-          </article>
-          <article class="tarjeta">
-            <h3>Dirección de Comercialización</h3>
-            <p>Facilita espacios de venta y promoción de productos de la economía social. Impulsa el comercio justo y el consumo responsable.</p>
-            <ul>
-              <li><strong>Feria Permanente</strong> — Plaza San Martín, de viernes a domingo.</li>
-              <li><strong>Feria Itinerante</strong> — en distintos barrios del distrito.</li>
-              <li><strong>Marca EME</strong> — canal de venta y visibilización de productos locales.</li>
-              <li><strong>Mercado Itinerante</strong>.</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
     <!-- ═══════════════ EDUCACIÓN ═══════════════ -->
-    <section id="educacion" class="seccion seccion--clara" aria-labelledby="t-educacion">
+    <section id="educacion" class="seccion" aria-labelledby="t-educacion">
       <div class="contenedor">
-        <p class="etiqueta">Educación</p>
-        <h2 id="t-educacion">Oferta educativa</h2>
-        <p class="bajada">Elegí un nivel para ver las instituciones, sus orientaciones y datos de contacto. Tocá <em>“Ver en el mapa”</em> para saber cómo llegar.</p>
+        <p class="etiqueta">Dónde estudiar</p>
+        <h2 id="t-educacion">Todas las escuelas e institutos, con sus datos</h2>
+        <p class="bajada">Elegí lo que estás buscando. En cada lugar vas a encontrar la dirección, el teléfono y un botón para ver <em>cómo llegar</em>.</p>
         <nav class="indice" aria-label="Niveles educativos">
-          <a href="#primaria-adultos">📘 Primaria adultos</a>
-          <a href="#secundaria-adultos">📗 Secundaria adultos</a>
-          <a href="#secundarias">🎒 Secundarias orientadas</a>
+          <a href="#primaria-adultos">📘 Primaria para adultos</a>
+          <a href="#secundaria-adultos">📗 Secundaria para adultos</a>
+          <a href="#secundarias">🎒 Secundarias</a>
           <a href="#tecnicas">🛠️ Técnicas</a>
           <a href="#discapacidad">🧩 Discapacidad</a>
-          <a href="#formacion">🔧 Formación laboral</a>
-          <a href="#superior">🎓 Superior</a>
+          <a href="#formacion">🔧 Oficios</a>
+          <a href="#superior">🎓 Institutos superiores</a>
           <a href="#artistica">🎭 Arte</a>
           <a href="#universidades">🏛️ Universidades</a>
         </nav>
       </div>
     </section>
 
-    <section id="primaria-adultos" class="seccion bloque" aria-labelledby="t-epa">
+    <section id="primaria-adultos" class="seccion seccion--clara bloque" aria-labelledby="t-epa">
       <div class="contenedor">
-        <h2 id="t-epa"><span aria-hidden="true">📘</span> Alfabetización y terminalidad primaria para jóvenes y adultos/as</h2>
-        <p class="bajada">Modalidad presencial para <strong>jóvenes mayores de 14 años y personas adultas</strong> que aún no hayan completado sus estudios primarios. Funciona una amplia oferta de Escuelas Primarias para Adultos, con sedes en establecimientos propios y en dispositivos descentralizados (“fuera de sede”), para garantizar el derecho a la educación permanente y acompañar trayectorias escolares discontinuas.</p>
+        <h2 id="t-epa"><span aria-hidden="true">📘</span> Primaria para jóvenes y adultos</h2>
+        <p class="frase">“Ya no le tengo tanto temor a no poder por la edad, y creo que recién empiezo.”</p>
+        <p class="bajada">Si tenés <strong>más de 14 años</strong> y no terminaste la primaria, estas escuelas son para vos. Son presenciales y están repartidas por todo el distrito: algunas funcionan en escuelas y otras en espacios barriales (“fuera de sede”), para que te queden cerca. Acompañan a quienes tuvieron que dejar y quieren volver, porque la educación es un derecho para toda la vida.</p>
         <div class="directorio" data-cat="epa"></div>
       </div>
     </section>
 
-    <section id="secundaria-adultos" class="seccion seccion--clara bloque" aria-labelledby="t-cens">
+    <section id="secundaria-adultos" class="seccion bloque" aria-labelledby="t-cens">
       <div class="contenedor">
-        <h2 id="t-cens"><span aria-hidden="true">📗</span> Terminalidad secundaria para jóvenes, adultos y adultas</h2>
-        <p class="bajada">Modalidad presencial para <strong>personas mayores de 18 años</strong> que no hayan completado sus estudios secundarios.</p>
+        <h2 id="t-cens"><span aria-hidden="true">📗</span> Secundaria para jóvenes y adultos</h2>
+        <p class="bajada">Si tenés <strong>18 años o más</strong> y te quedó pendiente la secundaria, tenés varias opciones. Elegí la que mejor se adapte a tu vida.</p>
         <div class="tarjetas tarjetas--dos">
           <article class="tarjeta tarjeta--acento">
-            <h3>Plan FinEs — Finalización de Estudios Secundarios</h3>
-            <p>Garantiza la finalización de la secundaria a jóvenes y adultos que no la hayan iniciado o completado. Ofrece acompañamiento de profesores-tutores, planes adaptados a las necesidades laborales y sociales, reconoce los saberes adquiridos a lo largo de la vida y fomenta el aprendizaje autónomo.</p>
+            <h3>Plan FinEs: terminá la secundaria con acompañamiento</h3>
+            <p>Pensado para quienes no empezaron o no terminaron la secundaria a tiempo. Tenés profes-tutores que te acompañan, un plan que se adapta a tu trabajo y a tu vida, y se reconoce todo lo que aprendiste a lo largo de los años.</p>
             <ul class="pastillas">
               <li><strong>Presencial</strong></li>
-              <li><strong>3 días por semana</strong> 5 horas diarias</li>
+              <li><strong>3 días por semana</strong> de 5 horas</li>
               <li><strong>6 cuatrimestres</strong></li>
             </ul>
           </article>
           <article class="tarjeta tarjeta--acento">
-            <h3>FinEs materias pendientes</h3>
-            <p>Para quienes terminaron de cursar la secundaria pero <strong>adeudan materias</strong>. Pueden inscribirse personas que hayan cursado en cualquier institución del país, bajo todas sus modalidades y planes de estudio. Incluye <strong>tutorías durante dos meses</strong> con profesores que acompañan hasta la evaluación final.</p>
-            <p><strong>Consultas FinEs Trayecto y materias pendientes:</strong><br>
+            <h3>¿Te quedaron materias? FinEs materias pendientes</h3>
+            <p>Si terminaste de cursar pero <strong>debés materias</strong> y por eso no tenés el título, este plan es para vos, aunque hayas cursado en otra escuela del país. Tenés <strong>dos meses de tutorías</strong> con profes que te acompañan hasta el examen final.</p>
+            <p><strong>Consultas sobre FinEs:</strong><br>
               ✉️ <a href="mailto:finesmoron@abc.gob.ar">finesmoron@abc.gob.ar</a><br>
-              📍 Presencial: García Silva 675, Morón</p>
+              📍 García Silva 675, Morón</p>
           </article>
         </div>
         <h3>Escuelas secundarias para adultos (CENS y CEBAS)</h3>
+        <p>Algunas cursan <strong>de lunes a viernes</strong> y otras <strong>3 días más 2 de tutoría</strong>. Fijate en cada tarjeta cuál te conviene.</p>
         <div class="directorio" data-cat="cens"></div>
       </div>
     </section>
 
-    <section id="secundarias" class="seccion bloque" aria-labelledby="t-ees">
+    <section id="secundarias" class="seccion seccion--clara bloque" aria-labelledby="t-ees">
       <div class="contenedor">
-        <h2 id="t-ees"><span aria-hidden="true">🎒</span> Escuelas secundarias orientadas para adolescentes y jóvenes</h2>
-        <p class="bajada">Formación integral que combina la educación general con trayectorias específicas según los intereses de cada estudiante: Ciencias Sociales, Ciencias Naturales, Economía y Administración, Comunicación, Artes y más. Acompañan el desarrollo de habilidades para la vida, promueven la participación estudiantil y preparan para continuar estudios superiores o ingresar al mundo del trabajo.</p>
+        <h2 id="t-ees"><span aria-hidden="true">🎒</span> Secundarias orientadas</h2>
+        <p class="bajada">Además de la formación general, cada escuela tiene orientaciones según lo que te interese: Ciencias Sociales, Ciencias Naturales, Economía y Administración, Comunicación, Arte y más. Te preparan para seguir estudiando, para trabajar y para la vida. <strong>Filtrá por orientación</strong> para encontrar la tuya.</p>
         <div class="directorio" data-cat="ees" data-filtro-orientacion></div>
       </div>
     </section>
 
-    <section id="tecnicas" class="seccion seccion--clara bloque" aria-labelledby="t-eet">
+    <section id="tecnicas" class="seccion bloque" aria-labelledby="t-eet">
       <div class="contenedor">
-        <h2 id="t-eet"><span aria-hidden="true">🛠️</span> Escuelas técnicas para adolescentes y jóvenes</h2>
-        <p class="bajada">Combinan la educación secundaria con formación técnica específica, preparando a las y los estudiantes tanto para la inserción laboral como para la continuidad en estudios superiores.</p>
+        <h2 id="t-eet"><span aria-hidden="true">🛠️</span> Escuelas técnicas</h2>
+        <p class="bajada">Terminás la secundaria con un título técnico: aprendés una especialidad que te sirve para empezar a trabajar o para seguir una carrera.</p>
         <div class="directorio" data-cat="eet"></div>
       </div>
     </section>
 
-    <section id="discapacidad" class="seccion bloque" aria-labelledby="t-cfi">
+    <section id="discapacidad" class="seccion seccion--clara bloque" aria-labelledby="t-cfi">
       <div class="contenedor">
-        <h2 id="t-cfi"><span aria-hidden="true">🧩</span> Formación integral e inclusión laboral</h2>
-        <p class="bajada">Promovemos el derecho a la educación, la capacitación laboral y la participación plena de personas con discapacidad. A través de escuelas de educación especial y <strong>Centros de Formación Integral (CFI)</strong> se desarrollan propuestas pedagógicas y talleres que fortalecen la autonomía, las habilidades personales y la preparación para el mundo del trabajo.</p>
+        <h2 id="t-cfi"><span aria-hidden="true">🧩</span> Discapacidad: formación e inclusión laboral</h2>
+        <p class="bajada">Todas las personas tienen derecho a aprender, capacitarse y trabajar. Las escuelas de educación especial y los <strong>Centros de Formación Integral (CFI)</strong> ofrecen talleres y propuestas que fortalecen la autonomía, las habilidades personales y la preparación para el trabajo.</p>
         <div class="destacado">
-          <h3>¿Qué son los CFI?</h3>
-          <p>Espacios educativos para jóvenes y adultos con discapacidad que hayan finalizado su trayecto en la educación especial o que requieran una propuesta formativa integral. Preparan para la vida independiente y el mundo del trabajo con talleres, prácticas, experiencias comunitarias y acompañamiento personalizado.</p>
-          <p><strong>📢 Consultas e inscripción:</strong> acercate a las instituciones en sus horarios de atención o comunicate por teléfono para conocer requisitos, talleres y vacantes.</p>
+          <h3>¿Qué es un CFI?</h3>
+          <p>Es un espacio para jóvenes y adultos con discapacidad que terminaron la educación especial o que necesitan una propuesta integral. Con talleres, prácticas, experiencias en la comunidad y acompañamiento personalizado, preparan para la vida independiente y el trabajo.</p>
+          <p><strong>📢 ¿Cómo me anoto?</strong> Acercate en el horario de atención o llamá por teléfono: te cuentan los requisitos, los talleres y las vacantes.</p>
         </div>
         <div class="directorio" data-cat="cfi"></div>
       </div>
     </section>
 
-    <section id="formacion" class="seccion seccion--clara bloque" aria-labelledby="t-cfl">
+    <section id="formacion" class="seccion bloque" aria-labelledby="t-cfl">
       <div class="contenedor">
-        <h2 id="t-cfl"><span aria-hidden="true">🔧</span> Centros de Formación Laboral y Profesional</h2>
-        <p class="bajada">Una amplia red de centros de gestión provincial y municipal brinda <strong>capacitaciones gratuitas</strong> orientadas al mundo del trabajo: formación técnica en oficios y perfiles laborales con salida inmediata, para personas <strong>mayores de 16 o 18 años</strong> según el curso.</p>
-        <p><a class="boton" href="#cursos">Ver todos los cursos disponibles →</a></p>
+        <h2 id="t-cfl"><span aria-hidden="true">🔧</span> Centros de formación laboral y profesional</h2>
+        <p class="frase">“Me anoté en un curso, por primera vez, para poder comenzar a trabajar.”</p>
+        <p class="bajada">Son centros provinciales y municipales con <strong>cursos gratuitos</strong> de oficios y perfiles laborales con salida inmediata. Podés anotarte desde los <strong>16 o 18 años</strong>, según el curso.</p>
+        <p><a class="boton" href="#cursos">Buscar entre todos los cursos →</a></p>
         <div class="directorio" data-cat="cfl"></div>
       </div>
     </section>
 
-    <section id="superior" class="seccion bloque" aria-labelledby="t-sup">
+    <section id="superior" class="seccion seccion--clara bloque" aria-labelledby="t-sup">
       <div class="contenedor">
         <h2 id="t-sup"><span aria-hidden="true">🎓</span> Institutos de enseñanza superior</h2>
-        <p class="bajada">Instituciones de gestión estatal, provincial y municipal donde cursar carreras docentes, tecnicaturas superiores y programas de formación continua.</p>
+        <p class="bajada">Institutos públicos, provinciales y municipales, donde podés estudiar para ser docente, hacer una tecnicatura o seguir formándote. También está la <strong>Universidad de Adultos Mayores</strong>, porque aprender no tiene edad.</p>
         <div class="directorio" data-cat="sup"></div>
       </div>
     </section>
 
-    <section id="artistica" class="seccion seccion--clara bloque" aria-labelledby="t-art">
+    <section id="artistica" class="seccion bloque" aria-labelledby="t-art">
       <div class="contenedor">
-        <h2 id="t-art"><span aria-hidden="true">🎭</span> Institutos de formación artística</h2>
-        <p class="bajada">El arte, más allá de ser una forma de expresión o entretenimiento, es una poderosa herramienta de conocimiento y transformación social. Las instituciones municipales y provinciales promueven propuestas educativas accesibles y de calidad en múltiples disciplinas.</p>
+        <h2 id="t-art"><span aria-hidden="true">🎭</span> Formación artística</h2>
+        <p class="bajada">El arte es una forma de expresarse y también una herramienta para conocer y transformar. Música, teatro, danza, artes visuales, murga, canto y tambores: hay propuestas municipales y provinciales para todas las edades.</p>
         <div class="directorio" data-cat="art"></div>
       </div>
     </section>
 
-    <section id="universidades" class="seccion bloque" aria-labelledby="t-uni">
+    <section id="universidades" class="seccion seccion--clara bloque" aria-labelledby="t-uni">
       <div class="contenedor">
-        <h2 id="t-uni"><span aria-hidden="true">🏛️</span> Educación superior universitaria</h2>
-        <p class="bajada">Las universidades públicas garantizan el acceso libre y gratuito a una formación académica de calidad, con carreras de grado y pregrado en diversas disciplinas. <em>Para conocer la oferta académica, fechas de inscripción y requisitos, visitá el sitio web de cada institución.</em></p>
+        <h2 id="t-uni"><span aria-hidden="true">🏛️</span> Universidades cerca de Morón</h2>
+        <p class="bajada">Las universidades nacionales son <strong>públicas y gratuitas</strong>, con carreras de grado y pregrado en muchas disciplinas. Entrá a la web de cada una para conocer las carreras, las fechas de inscripción y los requisitos.</p>
         <div class="directorio" data-cat="uni"></div>
       </div>
     </section>
@@ -416,13 +446,13 @@
     <!-- ═══════════════ CURSOS ═══════════════ -->
     <section id="cursos" class="seccion seccion--oscura" aria-labelledby="t-cursos">
       <div class="contenedor">
-        <p class="etiqueta">Oferta formativa 2026</p>
-        <h2 id="t-cursos">Buscador de cursos de formación profesional</h2>
-        <p class="bajada">Cursos gratuitos de los Centros de Formación Laboral y Profesional. Filtrá por rubro, localidad o institución.</p>
+        <p class="etiqueta">Cursos 2026</p>
+        <h2 id="t-cursos">Encontrá tu curso</h2>
+        <p class="bajada">Cursos gratuitos para aprender un oficio. Escribí lo que te gusta o filtrá por rubro, barrio o centro.</p>
         <form class="filtros" id="filtros-cursos" aria-controls="lista-cursos">
           <div class="campo campo--ancho">
-            <label for="f-texto">¿Qué querés aprender?</label>
-            <input id="f-texto" type="search" placeholder="Ej: electricista, cocina, marketing…" autocomplete="off">
+            <label for="f-texto">¿Qué te gustaría aprender?</label>
+            <input id="f-texto" type="search" placeholder="Ej: cocina, electricidad, peluquería, computación…" autocomplete="off">
           </div>
           <div class="campo">
             <label for="f-familia">Rubro</label>
@@ -433,11 +463,11 @@
             <select id="f-localidad"><option value="">Todas</option></select>
           </div>
           <div class="campo">
-            <label for="f-institucion">Institución</label>
-            <select id="f-institucion"><option value="">Todas</option></select>
+            <label for="f-institucion">Centro</label>
+            <select id="f-institucion"><option value="">Todos</option></select>
           </div>
           <div class="campo campo--check">
-            <label><input type="checkbox" id="f-moron" checked> Solo dentro del Partido de Morón</label>
+            <label><input type="checkbox" id="f-moron" checked> Solo en el Partido de Morón</label>
           </div>
           <button type="reset" class="boton boton--borde">Limpiar filtros</button>
         </form>
@@ -447,61 +477,232 @@
       </div>
     </section>
 
+    <!-- ═══════════════ TRABAJO ═══════════════ -->
+    <section id="empleo" class="seccion" aria-labelledby="t-empleo">
+      <div class="contenedor">
+        <p class="etiqueta">Trabajo y producción</p>
+        <h2 id="t-empleo">Te acompañamos a conseguir trabajo o a crear el tuyo</h2>
+        <p class="bajada">La <strong>Secretaría de Desarrollo Local, Empleo y Economía Social</strong> trabaja para que más vecinas y vecinos de Morón accedan a un trabajo digno: promueve la producción local, acompaña a quienes históricamente quedaron afuera, impulsa proyectos autogestivos y ofrece orientación y formación para el trabajo.</p>
+
+        <div class="tarjetas tarjetas--dos">
+          <article class="tarjeta tarjeta--acento">
+            <h3>💼 Agencia de Empleo y programas de empleo</h3>
+            <p>Te ayudamos a buscar trabajo y a las empresas a encontrar personal. La Agencia es parte de la <strong>Red de Servicios de Empleo del Ministerio de Trabajo</strong> y <strong>todos sus servicios son gratuitos</strong>.</p>
+            <p><strong>Si buscás trabajo:</strong></p>
+            <ul>
+              <li>Orientación laboral y entrevistas personalizadas.</li>
+              <li>Talleres para aprender a buscar empleo.</li>
+              <li>Ayuda para terminar tus estudios y armar tu CV.</li>
+              <li>Acceso a programas de empleo para personas desocupadas.</li>
+            </ul>
+            <p><strong>Si tenés una empresa:</strong> búsqueda y preselección de personal, asesoramiento legal y financiero para contratar e incentivos para capacitar en el puesto de trabajo.</p>
+          </article>
+          <article class="tarjeta tarjeta--acento">
+            <h3>📚 Formación para el Trabajo</h3>
+            <p>Acompaña a jóvenes y personas adultas para que <strong>mejoren sus oportunidades laborales</strong>, junto a escuelas, sindicatos, cámaras empresarias y centros de formación.</p>
+            <ul>
+              <li><strong>Vacantes gratuitas</strong> en cursos.</li>
+              <li>Asesoramiento sobre dónde terminar la primaria o la secundaria, o hacer un curso.</li>
+              <li>Prácticas en ambientes reales de trabajo.</li>
+            </ul>
+            <p>Con el <strong>Proyecto Educación y Trabajo</strong>, tutorías y talleres te ayudan a armar tu proyecto ocupacional, con perspectiva de género y mirada de economía social.</p>
+          </article>
+        </div>
+
+        <h3>Espacios donde aprender trabajando</h3>
+        <div class="tarjetas tarjetas--dos">
+          <article class="tarjeta">
+            <h4>🧵 Centro Textil e Indumentaria Morón</h4>
+            <p>Capacitación <strong>gratuita</strong> en confección, diseño y producción textil, con máquinas industriales. Talleres de nivel inicial, medio y avanzado, con acompañamiento para que puedas producir de forma profesional o armar tu propio taller.</p>
+            <p class="tarjeta__dir">📍 Baradero 1340, Morón</p>
+          </article>
+          <article class="tarjeta">
+            <h4>🏠 Centro de Profesionalización de Trabajadoras/es de Casas Particulares</h4>
+            <p>Para quienes trabajan en casas particulares. Capacitación <strong>gratuita con los materiales incluidos</strong>, tutorías y práctica, para valorar lo que ya sabés, profesionalizar tu trabajo, terminar tus estudios y ganar autonomía.</p>
+          </article>
+        </div>
+
+        <div id="economia-social" class="destacado destacado--verde">
+          <h3>🌱 Para emprender: economía social y popular</h3>
+          <p>Acompañamos emprendimientos, cooperativas y mutuales con una mirada humana, solidaria, ecológica y de género.</p>
+          <div class="tarjetas tarjetas--tres">
+            <div>
+              <h4>Apoyo para arrancar</h4>
+              <p><strong>Iniciativas Productivas y Autogestivas:</strong> acompañamiento técnico, formalización y financiamiento para personas desocupadas o en situación de vulnerabilidad.</p>
+            </div>
+            <div>
+              <h4>Microcréditos</h4>
+              <p><strong>Programa Municipal de Microcréditos:</strong> créditos escalonados para emprendimientos, cooperativas y mutuales, para producir o vender más.</p>
+            </div>
+            <div>
+              <h4>Asistencia técnica</h4>
+              <p><strong>Polos Productivos:</strong> ayuda en diseño, costos, comercialización y sustentabilidad, y talleres de gestión. 📍 Mariano Acha 780, Morón.</p>
+            </div>
+            <div>
+              <h4>Cooperativas y mutuales</h4>
+              <p>Te acompañamos a constituirlas, formalizarlas y gestionarlas. Y en el <strong>Consejo Municipal de Economía Social y Solidaria</strong> construimos políticas junto a quienes emprenden.</p>
+            </div>
+            <div>
+              <h4>Dónde vender</h4>
+              <p><strong>Feria Permanente</strong> en Plaza San Martín (viernes a domingo), <strong>Feria</strong> y <strong>Mercado Itinerante</strong> en los barrios, y la <strong>Marca EME</strong> para mostrar productos locales.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ CONOCIENDO MORÓN ═══════════════ -->
+    <section id="moron" class="seccion seccion--clara" aria-labelledby="t-moron">
+      <div class="contenedor">
+        <p class="etiqueta">Nuestro lugar</p>
+        <h2 id="t-moron">Conociendo Morón</h2>
+        <p class="bajada">Estamos en el oeste del conurbano, en el corazón del Área Metropolitana de Buenos Aires. Por la cercanía con la Ciudad y por nuestro desarrollo urbano, económico y educativo, somos uno de los centros más importantes de la región oeste.</p>
+
+        <div class="moron-grilla">
+          <figure class="mapa-localidades">
+            <img src="assets/img/mapa-localidades.jpg" alt="Mapa del Partido de Morón con sus cinco localidades: El Palomar al norte, Villa Sarmiento y Haedo al este, Castelar al oeste y Morón al centro-sur. Limita con Hurlingham, Tres de Febrero, La Matanza, Merlo e Ituzaingó." width="736" height="758" loading="lazy">
+            <figcaption>Las cinco localidades del partido y los distritos vecinos.</figcaption>
+          </figure>
+          <ul class="datos">
+            <li><strong>334.178</strong><span>vecinas y vecinos según el Censo 2022, el 3,07% de la población del Gran Buenos Aires. La mayoría se identifica como mujer o persona autopercibida como tal.</span></li>
+            <li><strong>55,6 km²</strong><span>y cinco localidades: Morón, Castelar, Haedo, El Palomar y Villa Sarmiento.</span></li>
+            <li><strong>20 km</strong><span>de la Ciudad de Buenos Aires y 88 km de La Plata, con muy buena conexión con los centros urbanos, industriales y universitarios.</span></li>
+            <li><strong>+700</strong><span>industrias y 10.600 comercios y servicios: metalmecánica, textil, plástico, madera, alimentos y tecnología.</span></li>
+          </ul>
+        </div>
+
+        <h3>Donde se genera trabajo: los parques industriales</h3>
+        <p>Con el tren Sarmiento, el Acceso Oeste, autopistas y rutas, Morón es un polo productivo, comercial y de servicios clave para la inversión y el empleo local.</p>
+        <div class="tarjetas tarjetas--tres">
+          <article class="tarjeta">
+            <h4>La Cantábrica</h4>
+            <p>Un parque industrial modelo, donde el Estado y las empresas trabajan juntos. Hay PyMEs de metalmecánica, química, impresión, caucho, alimentos, plásticos y diseño. Se está <strong>ampliando 78.000 m²</strong> para recibir <strong>más de 60 empresas</strong> y generar <strong>1.000 empleos directos</strong>.</p>
+            <p class="tarjeta__dir">📍 Tres Arroyos 329, Haedo</p>
+          </article>
+          <article class="tarjeta">
+            <h4>PITAM</h4>
+            <p>El Parque Industrial Tecnológico Aeronáutico Morón, dentro del Aeródromo. Impulsa la aeronáutica, la electrónica, la logística, la informática y la formación técnica, en <strong>20 hectáreas</strong> que se pueden ampliar.</p>
+            <p class="tarjeta__dir">📍 Av. Pte. Figueroa Alcorta 500, Castelar</p>
+          </article>
+          <article class="tarjeta">
+            <h4>Parque DECA</h4>
+            <p>En lo que fue la Planta Carraro. Desde 2015 es un <strong>parque industrial multirubro</strong> con infraestructura moderna y cuidado del ambiente.</p>
+            <p class="tarjeta__dir">📍 Valentín Gómez 577, Haedo</p>
+          </article>
+          <article class="tarjeta">
+            <h4>Parque Industrial Morón</h4>
+            <p>Empresas que fabrican electrodomésticos, alimentos, libros y semirremolques: un motor del desarrollo económico de la región.</p>
+          </article>
+        </div>
+
+        <div class="dos-columnas dos-columnas--arriba">
+          <div>
+            <h3>Un Estado cerca de cada barrio</h3>
+            <p>El Municipio está encabezado por el intendente <strong>Lic. Lucas Ghi</strong>, con 10 secretarías y <strong>14 Unidades de Gestión Comunitaria (UGC)</strong> repartidas por el territorio para estar cerca de cada barrio. También hay sedes del <strong>Poder Judicial de la Provincia</strong> y <strong>juzgados federales</strong>, y un <strong>Concejo Deliberante</strong> con 24 concejalas y concejales elegidos por el voto.</p>
+          </div>
+          <div>
+            <h3>Región Educativa N° 8</h3>
+            <p>Junto con Ituzaingó y Merlo formamos la <strong>Región Educativa N° 8</strong>, con escuelas e institutos públicos y privados de todos los niveles: inicial, primario, secundario, técnico, artístico, superior y universitario.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ═══════════════ MAPA ═══════════════ -->
     <section id="mapa" class="seccion" aria-labelledby="t-mapa">
       <div class="contenedor">
-        <h2 id="t-mapa">¿Cómo llegar?</h2>
-        <p class="bajada">Elegí una institución de la lista para verla en el mapa y obtener indicaciones.</p>
+        <p class="etiqueta">Cómo llegar</p>
+        <h2 id="t-mapa">¿Cómo llego?</h2>
+        <p class="bajada">Tocá un lugar de la lista para verlo en el mapa y pedir indicaciones desde donde estés.</p>
         <div class="mapa-grilla">
           <div class="mapa-panel">
-            <label for="m-cat" class="solo-lectores">Tipo de institución</label>
+            <label for="m-cat" class="solo-lectores">Tipo de lugar</label>
             <select id="m-cat"></select>
             <label for="m-q" class="solo-lectores">Filtrar por nombre o dirección</label>
-            <input id="m-q" type="search" placeholder="Filtrar por nombre o dirección…" autocomplete="off">
+            <input id="m-q" type="search" placeholder="Buscá por nombre o calle…" autocomplete="off">
             <ul id="m-lista" class="mapa-lista"></ul>
           </div>
           <div class="mapa-visor">
-            <iframe id="m-iframe" title="Mapa de la institución seleccionada" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Partido%20de%20Mor%C3%B3n%2C%20Buenos%20Aires%2C%20Argentina&z=13&output=embed"></iframe>
+            <iframe id="m-iframe" title="Mapa del lugar elegido" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Partido%20de%20Mor%C3%B3n%2C%20Buenos%20Aires%2C%20Argentina&z=13&output=embed"></iframe>
             <div class="mapa-info" id="m-info">
               <strong>Partido de Morón</strong>
-              <span>Seleccioná una institución de la lista.</span>
+              <span>Elegí un lugar de la lista.</span>
             </div>
           </div>
         </div>
 
-        <h3>Transporte y accesos</h3>
+        <h3>Para moverte</h3>
         <div class="tarjetas tarjetas--tres">
           <article class="tarjeta">
-            <h4>🚆 Tren Línea Sarmiento</h4>
-            <p>Estaciones en el partido:</p>
+            <h4>🚆 En tren</h4>
+            <p>Línea Sarmiento:</p>
             <ul class="pastillas pastillas--simples"><li>Haedo</li><li>Morón</li><li>Castelar</li></ul>
-            <p>Y en la línea San Martín: <strong>El Palomar</strong>.</p>
+            <p>Línea San Martín: <strong>El Palomar</strong>.</p>
+          </article>
+          <article class="tarjeta">
+            <h4>🚌 En colectivo</h4>
+            <ul class="pastillas pastillas--simples"><li>166</li><li>182</li><li>302</li><li>338</li><li>634</li><li>635</li></ul>
           </article>
           <article class="tarjeta">
             <h4>🛣️ Accesos principales</h4>
             <ul class="pastillas pastillas--simples"><li>Acceso Oeste</li><li>Av. Rivadavia</li><li>Camino de Cintura</li><li>Av. Vergara</li><li>Gaona</li><li>Don Bosco</li></ul>
           </article>
-          <article class="tarjeta">
-            <h4>🚌 Colectivos</h4>
-            <ul class="pastillas pastillas--simples"><li>166</li><li>182</li><li>302</li><li>338</li><li>634</li><li>635</li></ul>
-          </article>
         </div>
       </div>
     </section>
 
-    <!-- ═══════════════ VOCES ═══════════════ -->
-    <section id="voces" class="seccion seccion--clara" aria-labelledby="t-voces">
-      <div class="contenedor">
-        <h2 id="t-voces">📣 Voces de estudiantes</h2>
-        <div class="voces">
-          <blockquote><p>“Los cursos son importantes así como su difusión, para que más personas se puedan preparar y dar sentido a su vida, como a mí…”</p><footer>Gabriela Pintos</footer></blockquote>
-          <blockquote><p>“Yo comencé en un plan social y me sentía perdida. Cuando me dieron la lista de cursos, un rincón de mi corazón saltó. Ya no le tengo tanto temor a no poder por la edad, y creo que recién empiezo…”</p><footer>Liliana Del Sordo</footer></blockquote>
-          <blockquote><p>“Estoy sin trabajo, quiero estudiar primero algo y luego armar un emprendimiento para sostener a mi familia…”</p><footer>Nicolás Ierino</footer></blockquote>
-          <blockquote><p>“La oportunidad de estudiar que he tenido a mis 50 años es maravillosa, junto a la posibilidad de trabajar, integrándome así al mercado laboral…”</p><footer>María del Carmen Rubier</footer></blockquote>
-          <blockquote><p>“Con tan solo 20 años logré empaparme de conocimientos. Mi futuro continúa y tengo la oportunidad de aplicarlos en la vida. Aprendí que las ganas hacen la fuerza…”</p><footer>Sabrina Rossetti</footer></blockquote>
-          <blockquote><p>“Cuando me enfrenté a la escuela textil solo tenía ganas de aprender y mucho miedo por la situación en la que estaba. Hoy tengo un pequeño taller de ropa interior. Voy caminando despacio. Gracias por darme los elementos para recorrer este camino…”</p><footer>Teresita De León</footer></blockquote>
-          <blockquote><p>“Me anoté en un curso, por primera vez, para poder comenzar a trabajar…”</p><footer>Fernando Arrieta</footer></blockquote>
-          <blockquote><p>“Con lo que aprendí en los cursos estoy haciendo trabajos en mi casa. Voy a continuar especializándome, por eso me anoté en otro curso para saber más…”</p><footer>Gustavo López</footer></blockquote>
+    <!-- ═══════════════ PREGUNTAS ═══════════════ -->
+    <section id="preguntas" class="seccion seccion--clara" aria-labelledby="t-preguntas">
+      <div class="contenedor angosto">
+        <p class="etiqueta">Preguntas frecuentes</p>
+        <h2 id="t-preguntas">Las dudas que más nos llegan</h2>
+        <div class="faq">
+          <details>
+            <summary>¿Soy grande para volver a estudiar?</summary>
+            <p>No. Las escuelas primarias para adultos reciben desde los 14 años, la secundaria para adultos y el Plan FinEs desde los 18, y hay hasta una Universidad de Adultos Mayores. Como cuenta María del Carmen: <em>“la oportunidad de estudiar que he tenido a mis 50 años es maravillosa”</em>.</p>
+          </details>
+          <details>
+            <summary>¿Los cursos de oficios se pagan?</summary>
+            <p>No. Los Centros de Formación Laboral y Profesional dan capacitaciones gratuitas. Según el curso, podés anotarte desde los 16 o los 18 años. <a href="#cursos">Buscá tu curso acá</a>.</p>
+          </details>
+          <details>
+            <summary>¿Cuál es la diferencia entre el CENS y el Plan FinEs?</summary>
+            <p>Los dos sirven para terminar la secundaria si tenés 18 años o más. Los <strong>CENS</strong> son escuelas secundarias para adultos: algunas cursan de lunes a viernes y otras 3 días más 2 de tutoría. El <strong>FinEs</strong> se cursa 3 días por semana, 5 horas por día, durante 6 cuatrimestres, con profes-tutores. <a href="#secundaria-adultos">Ver las opciones</a>.</p>
+          </details>
+          <details>
+            <summary>Terminé de cursar pero me quedaron materias, ¿qué hago?</summary>
+            <p>Anotate en <strong>FinEs materias pendientes</strong>: son dos meses de tutorías con profes que te acompañan hasta el examen final, aunque hayas cursado en otra escuela del país. Consultas a <a href="mailto:finesmoron@abc.gob.ar">finesmoron@abc.gob.ar</a> o en García Silva 675, Morón.</p>
+          </details>
+          <details>
+            <summary>¿La Agencia de Empleo cobra algo?</summary>
+            <p>No, todos sus servicios son gratuitos, tanto para quienes buscan trabajo como para las empresas que buscan personal.</p>
+          </details>
+          <details>
+            <summary>¿Las universidades cercanas son gratuitas?</summary>
+            <p>Las universidades nacionales de la lista (UNM, UNAHUR, UBA, UNGS, UNLaM, UNLu, UNSAM, UNTREF, UNO, UNPAZ y UTN) son públicas y gratuitas. La Universidad de Morón es de gestión privada. <a href="#universidades">Ver universidades</a>.</p>
+          </details>
+          <details>
+            <summary>Tengo una discapacidad, ¿dónde puedo formarme?</summary>
+            <p>En los Centros de Formación Integral (CFI) de Haedo, Morón y El Palomar, con talleres y acompañamiento personalizado para la vida independiente y el trabajo. <a href="#discapacidad">Ver los CFI</a>.</p>
+          </details>
+          <details>
+            <summary>No encuentro lo que busco, ¿a quién le pregunto?</summary>
+            <p>Escribinos a <a href="mailto:formacionparaeltrabajo@moron.gov.ar">formacionparaeltrabajo@moron.gov.ar</a>, llamá al <a href="tel:+541144897724">(011) 4489-7724</a> o acercate a Gral. José de San Martín 471, Morón. Te ayudamos a encontrar tu opción.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cierre -->
+    <section class="cierre" aria-labelledby="t-cierre">
+      <div class="contenedor cierre__fila">
+        <div>
+          <h2 id="t-cierre">¿Tenés dudas? Hablemos.</h2>
+          <p>No hace falta que tengas todo claro. Contanos qué te gustaría hacer y te ayudamos a encontrar el camino.</p>
+        </div>
+        <div class="cierre__acciones">
+          <a class="boton boton--blanco" href="tel:+541144897724">📞 Llamar al (011) 4489-7724</a>
+          <a class="boton boton--borde-blanco" href="mailto:formacionparaeltrabajo@moron.gov.ar">✉️ Escribir un correo</a>
         </div>
       </div>
     </section>
@@ -520,7 +721,7 @@
           <li>📞 <a href="tel:+541144897724">(011) 4489-7724</a></li>
           <li>✉️ <a href="mailto:formacionparaeltrabajo@moron.gov.ar">formacionparaeltrabajo@moron.gov.ar</a></li>
         </ul>
-        <p class="pie__nota">Guía Educativa y de Formación Laboral de Morón 2026. Los datos de contacto, horarios y fechas de inicio pueden cambiar: te recomendamos confirmar con cada institución antes de acercarte.</p>
+        <p class="pie__nota">Guía Educativa y de Formación Laboral de Morón 2026. Los teléfonos, horarios y fechas pueden cambiar: antes de ir, confirmá con cada institución.</p>
       </div>
     </div>
   </footer>
