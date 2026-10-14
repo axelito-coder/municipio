@@ -21,9 +21,15 @@
     return String(texto || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
   }
 
+  // Las palabras largas se comparan por su raíz, para que "peluquería" encuentre
+  // "Peluquero/a", "carpintería" a "carpintero" y "electricidad" a "electricista".
+  function raizPalabra(palabra) {
+    return palabra.length >= 7 ? palabra.slice(0, Math.max(5, palabra.length - 3)) : palabra;
+  }
+
   function coincide(texto, consulta) {
     var t = norm(texto);
-    return norm(consulta).split(/\s+/).filter(Boolean).every(function (p) { return t.indexOf(p) !== -1; });
+    return norm(consulta).split(/\s+/).filter(Boolean).every(function (p) { return t.indexOf(raizPalabra(p)) !== -1; });
   }
 
   function unicos(lista) {
