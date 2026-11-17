@@ -231,11 +231,12 @@
 
   // ── Buscador de cursos ────────────────────────────────────────────────────
   var fTexto = $("#f-texto"), fFamilia = $("#f-familia"), fLocalidad = $("#f-localidad"),
-      fInstitucion = $("#f-institucion"), fMoron = $("#f-moron");
+      fInstitucion = $("#f-institucion"), fCiclo = $("#f-ciclo"), fMoron = $("#f-moron");
   var listaCursos = $("#lista-cursos"), contador = $("#contador-cursos"), botonMas = $("#mas-cursos");
   var POR_PAGINA = 24, mostrados = POR_PAGINA, filtrados = [];
 
-  CURSOS.sort(function (a, b) { return a.c.localeCompare(b.c, "es"); });
+  // Primero el ciclo más nuevo; dentro de cada ciclo, por nombre
+  CURSOS.sort(function (a, b) { return (b.a - a.a) || a.c.localeCompare(b.c, "es"); });
 
   function llenarSelect(sel, valores) {
     sel.insertAdjacentHTML("beforeend", valores.map(function (v) { return "<option>" + esc(v) + "</option>"; }).join(""));
@@ -243,12 +244,15 @@
   llenarSelect(fFamilia, unicos(CURSOS.map(function (c) { return c.f; })));
   llenarSelect(fLocalidad, unicos(CURSOS.map(function (c) { return c.l; })));
   llenarSelect(fInstitucion, unicos(CURSOS.map(function (c) { return c.i; })));
+  llenarSelect(fCiclo, unicos(CURSOS.map(function (c) { return String(c.a); })).reverse());
 
   function tarjetaCurso(c) {
     var datos = "";
     if (c.n === "Nuevo") datos += '<span class="curso__nuevo">Nuevo</span>';
     if (c.h) datos += "<span>⏱️ " + esc(c.h) + " horas</span>";
-    if (c.dt) datos += "<span>📅 Inicio: " + esc(c.dt) + "</span>";
+    if (c.per) datos += "<span>📅 " + esc(c.per) + "</span>";
+    else if (c.dt) datos += "<span>📅 Inicio: " + esc(c.dt) + "</span>";
+    if (c.a) datos += "<span>Ciclo " + esc(c.a) + "</span>";
     var sede = [c.s, c.l].filter(Boolean).join(" · ");
     return '<article class="curso">' +
       '<span class="curso__familia">' + esc(c.f) + "</span>" +
@@ -267,6 +271,7 @@
       if (fFamilia.value && c.f !== fFamilia.value) return false;
       if (fLocalidad.value && c.l !== fLocalidad.value) return false;
       if (fInstitucion.value && c.i !== fInstitucion.value) return false;
+      if (fCiclo.value && String(c.a) !== fCiclo.value) return false;
       if (fTexto.value && !coincide([c.c, c.f, c.i, c.e, c.s, c.l].join(" "), fTexto.value)) return false;
       return true;
     });
@@ -278,7 +283,7 @@
     if (!botonMas.hidden) botonMas.textContent = "Ver más cursos (" + (filtrados.length - mostrados) + " restantes)";
   }
 
-  [fFamilia, fLocalidad, fInstitucion, fMoron].forEach(function (el) { el.addEventListener("change", function () { filtrarCursos(true); }); });
+  [fFamilia, fLocalidad, fInstitucion, fCiclo, fMoron].forEach(function (el) { el.addEventListener("change", function () { filtrarCursos(true); }); });
   fTexto.addEventListener("input", function () { filtrarCursos(true); });
   $("#filtros-cursos").addEventListener("submit", function (e) { e.preventDefault(); });
   $("#filtros-cursos").addEventListener("reset", function () { setTimeout(function () { filtrarCursos(true); }, 0); });
@@ -290,6 +295,7 @@
     fFamilia.value = "";
     fLocalidad.value = "";
     fInstitucion.value = opciones.institucion || "";
+    fCiclo.value = "";
     fMoron.checked = !opciones.institucion && !opciones.texto;
     filtrarCursos(true);
     $("#cursos").scrollIntoView();

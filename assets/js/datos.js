@@ -119,6 +119,7 @@ window.INSTITUCIONES = [
   { cat: "cfl", nombre: "CFL N° 406", detalle: "Provincial · Sede SEOCA", dir: "San Martín 542", loc: "Morón", tel: "4628-9211", cursos: "CFL 406" },
   { cat: "cfl", nombre: "CFL N° 407", detalle: "Provincial · Secretaría de Desarrollo Local, Empleo y Economía Social", dir: "Gral. José de San Martín 471", loc: "Morón", cursos: "CFL 407" },
   { cat: "cfl", nombre: "CFL N° 408", detalle: "Provincial", dir: "Pte. Sarmiento 1034", loc: "Morón", cursos: "CFL 408" },
+  { cat: "cfl", nombre: "CFL N° 409", detalle: "Provincial · Federación Gráfica Bonaerense", dir: "9 de Julio 77", loc: "Moreno", cursos: "CFL 409", nota: "Se suma en el plan 2027. También dicta cursos en Marcos Paz y Merlo." },
   { cat: "cfl", nombre: "CFP N° 401", detalle: "Provincial", dir: "Monseñor de Andrea 50", loc: "Haedo", tel: "4460-2191", cursos: "CFP 401" },
   { cat: "cfl", nombre: "CFP San José", detalle: "Provincial", cursos: "CFP SAN JOSÉ" },
   { cat: "cfl", nombre: "CFP Nuestra Señora de Fátima", detalle: "Provincial", cursos: "CFP NRA FÁTIMA" },
@@ -134,7 +135,7 @@ window.INSTITUCIONES = [
   { cat: "sup", nombre: "Escuela Municipal de Guardavidas", detalle: "Municipal · Formación profesional en actividades acuáticas", dir: "Santa María de Oro 3530 (Gorki Grana)", loc: "Castelar", tel: "4624-4375 / 4661-0135" },
   { cat: "sup", nombre: "Universidad de Adultos Mayores", detalle: "Municipal · Formación integral para personas mayores", dir: "Arrecifes 974", loc: "Castelar", tel: "4623-8931" },
   { cat: "sup", nombre: "ISFD N° 108 “Manuel Dorrego”", detalle: "Provincial · Profesorados en Educación Inicial, Primaria y Especial", dir: "Casullo 125", loc: "Morón", tel: "4629-7641" },
-  { cat: "sup", nombre: "ISFD N° 176 (articulación con IMES)", detalle: "Provincial · Técnico superior en Administración / RRHH", dir: "Belgrano 357", loc: "Morón" },
+  { cat: "sup", nombre: "ISFD N° 176 (articulación con IMES)", detalle: "Provincial · Tecnicaturas superiores en Administración de Pymes, Administración de Recursos Humanos y Ciencias de Datos e Inteligencia Artificial", dir: "Belgrano 357", loc: "Morón", nota: "Ciencias de Datos e Inteligencia Artificial es nueva en el plan 2027 y reemplaza a Internet de las cosas y sistemas embebidos." },
   { cat: "sup", nombre: "ISFD N° 45 “Julio Cortázar”", detalle: "Provincial · Profesorados: Inicial, Primaria, Lengua, Física, Química, Historia, Geografía, Economía y Gestión", dir: "Fasola 950", loc: "Haedo", tel: "4443-6502 / 4659-7657", nota: "Anexo: Caseros y Directorio" },
 
   // ── Formación artística ──────────────────────────────────────────────────
