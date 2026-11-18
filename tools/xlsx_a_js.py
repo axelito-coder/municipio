@@ -26,10 +26,11 @@ FUENTES = [
     ("Planificacion_2027_Consolidado.xlsx", ["CFL", "CFP"], 2027, True),
 ]
 
-# En la planificación 2027 la columna "carga horaria" del CFP 401 trae valores
-# de 8 a 15 (en 2026 los mismos cursos tenían cientos de horas), así que no son
-# horas totales y no se muestran.
-SIN_CARGA_HORARIA = {(2027, "CFP 401")}
+# En la planificación 2027 la columna "carga horaria" del CFP 401 y del CFL 402
+# trae valores de 8 a 20 (en 2026 los mismos cursos tenían cientos de horas), así
+# que no son horas totales: se usan solo las horas escritas en el nombre del curso,
+# como "Mecánica de Ciclomotores (300)", y si no hay, no se muestran.
+SIN_CARGA_HORARIA = {(2027, "CFP 401"), (2027, "CFL 402")}
 
 MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio",
          "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
@@ -147,6 +148,9 @@ def nombre_curso(valor, minusculas):
     texto = limpiar(valor)
     horas = ""
     m = re.search(r"\s*\((\d+)\s*hs?\.?\)\s*$", texto, flags=re.I)
+    if not m and minusculas:
+        # "… (300)" o "… 308" al final del nombre: también es la carga horaria
+        m = re.search(r"\s*\((\d+)\)\s*$", texto) or re.search(r"\s+(\d{3})\s*$", texto)
     if m:
         horas, texto = m.group(1), texto[:m.start()]
     if minusculas and texto.isupper():
@@ -231,7 +235,7 @@ def leer(archivo, hojas, ciclo, minusculas):
                 codigo = ""
             horas = limpiar(val("horas")) or horas_en_nombre
             if (ciclo, inst) in SIN_CARGA_HORARIA:
-                horas = ""
+                horas = horas_en_nombre
             iso, inicio_txt = fecha(val("inicio"))
             gestion = limpiar(val("gestion"))
             cursos.append({
