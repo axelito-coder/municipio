@@ -17,11 +17,6 @@ Sitio web de la Guía Educativa y de Formación Laboral del Municipio de Morón 
 
 Es un sitio estático (HTML, CSS y JavaScript sin dependencias): no necesita servidor ni compilación. Se puede abrir `index.html` directamente en el navegador.
 
-## Publicar con GitHub Pages
-
-1. En GitHub, entrá a **Settings → Pages**.
-2. En *Build and deployment*, elegí **Deploy from a branch**, rama `main` y carpeta `/ (root)`.
-3. Guardá. En unos minutos el sitio queda publicado en `https://axelito-coder.github.io/municipio/`.
 
 ## Estructura
 
