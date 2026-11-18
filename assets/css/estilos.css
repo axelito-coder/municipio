@@ -71,7 +71,6 @@
 :root[data-contraste="alto"] .faq details { border: 2px solid #000; }
 :root[data-contraste="alto"] a { text-decoration: underline; }
 :root[data-contraste="alto"] .portada { background: #fff; }
-:root[data-contraste="alto"] .portada__ilustracion { display: none; }
 
 *, *::before, *::after { box-sizing: border-box; }
 [hidden] { display: none !important; }
