@@ -434,6 +434,8 @@ p { margin: 0 0 1em; }
 .quienes__item li { overflow-wrap: anywhere; }
 .quienes__correo { display: flex; gap: .35em; align-items: baseline; }
 .quienes__correo a { min-width: 0; }
+.quienes__creditos { margin: 28px 0 0; font-size: .92rem; opacity: .8; }
+.quienes__creditos strong { color: #fff; }
 :root[data-contraste="alto"] .quienes__item { border: 2px solid #fff; }
 .pie { background: var(--oscuro); color: #ece6e1; padding: 48px 0; }
 .pie a { color: #fff; }
@@ -454,7 +456,7 @@ p { margin: 0 0 1em; }
   .persona-panel { margin-bottom: 12px; break-inside: avoid; }
   .cabecera { position: static; }
   .portada, .seccion--oscura, .pie { background: #fff !important; color: #000 !important; padding: 16px 0; }
-  .quienes h2, .quienes__item h3 { color: #000; }
+  .quienes h2, .quienes__item h3, .quienes__creditos strong { color: #000; }
   .quienes, .quienes__item { border-color: #999; background: #fff; break-inside: avoid; }
   .seccion { padding: 16px 0; }
   .editorial { display: block; }
