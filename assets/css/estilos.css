@@ -121,7 +121,15 @@ p { margin: 0 0 1em; }
 .cabecera { position: sticky; top: 0; z-index: 50; background: var(--fondo); border-bottom: 1px solid var(--borde); }
 .cabecera__fila { display: flex; align-items: center; gap: 16px; min-height: 68px; }
 .marca { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--texto); margin-right: auto; }
-.marca img { width: 44px; height: auto; background: #fff; border-radius: 8px; padding: 2px; }
+.marca img { width: 44px; height: auto; }
+/* El logo tiene dos versiones: texto gris para fondos claros y gris claro para fondos oscuros */
+.logo--oscuro { display: none; }
+.pie .logo--claro { display: none; }
+.pie .logo--oscuro { display: block; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-tema="claro"]):not([data-contraste="alto"]) .logo--claro { display: none; }
+  :root:not([data-tema="claro"]):not([data-contraste="alto"]) .logo--oscuro { display: inline-block; }
+}
 .marca__texto { display: flex; flex-direction: column; line-height: 1.15; }
 .marca__texto strong { font-size: 1.05rem; }
 .marca__texto span { font-size: .85rem; color: var(--texto-suave); }
@@ -441,7 +449,7 @@ p { margin: 0 0 1em; }
 .pie h2 { font-size: 1.4rem; }
 .pie__grilla { display: grid; gap: 24px; align-items: start; }
 @media (min-width: 700px) { .pie__grilla { grid-template-columns: auto 1fr; } }
-.pie__logo { background: #fff; border-radius: 12px; padding: 8px; width: 96px; }
+.pie__logo { width: 96px; height: auto; }
 .pie__contacto { list-style: none; padding: 0; margin: 0 0 18px; display: grid; gap: 6px; font-size: 1.1rem; }
 .pie__nota { font-size: .92rem; opacity: .8; max-width: 52em; }
 
@@ -456,6 +464,8 @@ p { margin: 0 0 1em; }
   .cabecera { position: static; }
   .portada, .seccion--oscura, .pie { background: #fff !important; color: #000 !important; padding: 16px 0; }
   .quienes h2, .quienes__item h3, .quienes__creditos strong { color: #000; }
+  .logo--claro { display: inline-block !important; }
+  .logo--oscuro { display: none !important; }
   .quienes, .quienes__item { border-color: #999; background: #fff; break-inside: avoid; }
   .seccion { padding: 16px 0; }
   .editorial { display: block; }
